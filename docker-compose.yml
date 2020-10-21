@@ -5,3 +5,7 @@ services:
     image: adamlarsonlee/tasqr-db:latest
     ports:
       - '5431:5431'
+  nestjs:
+    image: adamlarsonlee/tasqr-api:latest
+    ports:
+      - '3000:3000'
