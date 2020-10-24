@@ -16,7 +16,7 @@ services:
       - '3000'
   
   angular:
-    image: adamlarsonlee/tasqr-app:latest@sha256:76915321d3e2e0842b623cabb4f180913fe203b68bf55a560302c8c2c2c099bf
+    image: adamlarsonlee/tasqr-app:latest@sha256:0ba0d20a7ca761329fad5fe3b4a5bc6b980bae200f6ddfded3aee12bd9b5b867
     expose:
       - '4200'
     volumes:
