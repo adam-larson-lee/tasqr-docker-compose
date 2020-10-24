@@ -23,7 +23,7 @@ services:
       - 'www:/www'
 
   nginx:
-    image: adamlarsonlee/tasqr-proxy:latest@sha256:cde60795d63416b3febdac3c0d176fb095c7f5812838436936087ed8188e3a16
+    image: adamlarsonlee/tasqr-proxy:latest@sha256:32f9083bb33e0f70e7f18d9b05350ad8c3faba98d1358bde5838d011013223c9
     ports:
       - '80:80'
     volumes:
