@@ -17,6 +17,7 @@ services:
   
   angular:
     image: adamlarsonlee/tasqr-app:latest@sha256:0ba0d20a7ca761329fad5fe3b4a5bc6b980bae200f6ddfded3aee12bd9b5b867
+    restart: no
     expose:
       - '4200'
     volumes:
