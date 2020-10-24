@@ -1,11 +1,30 @@
 version: '2'
 
+volumes:
+  www:
+
 services:
+
   postgres:
     image: adamlarsonlee/tasqr-db:latest@sha256:9430c66c700dce47c0eb3cc471a630c41586e27f16d5400d507b0fc942e34ec4
-    ports:
-      - '5431:5431'
+    expose:
+      - '5431'
+
   nestjs:
     image: adamlarsonlee/tasqr-api:latest@sha256:0b397bfdbdd7e78fa3d405b270dd99624d15a89a32687fda2bff46ed0e7b8216
+    expose:
+      - '3000'
+  
+  angular:
+    image: adamlarsonlee/tasqr-app:latest@sha256:56447ec32c557150d1485e62bb02c455fd0250ba6d6d245ecb9d8c08fa5485dc
+    expose:
+      - '4200'
+    volumes:
+      - 'www:/www'
+
+  nginx:
+    image: adamlarsonlee/tasqr-proxy:latest@sha256:03fd16a8d2e6fe0101f11b96a0fbf4e3f75299a11f7c24f12f7367d60d794186
     ports:
-      - '3000:3000'
+      - '80:80'
+    volumes:
+      - 'www:/www'
