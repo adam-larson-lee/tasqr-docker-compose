@@ -7,8 +7,8 @@ services:
 
   postgres:
     image: adamlarsonlee/tasqr-db:latest@sha256:9430c66c700dce47c0eb3cc471a630c41586e27f16d5400d507b0fc942e34ec4
-    expose:
-      - '5431'
+    ports:
+      - '5432:5432'
 
   nestjs:
     image: adamlarsonlee/tasqr-api:latest@sha256:0b397bfdbdd7e78fa3d405b270dd99624d15a89a32687fda2bff46ed0e7b8216
