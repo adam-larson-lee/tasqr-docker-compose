@@ -11,7 +11,7 @@ services:
       - '5432:5432'
 
   nestjs:
-    image: adamlarsonlee/tasqr-api:latest@sha256:0e2c52e9631185efc09eedade43319a2f573ae9611fbac084899a95fe344fd1b
+    image: adamlarsonlee/tasqr-api:latest@sha256:25e7add057e197f8a0a00e0ba60c014dde90f3e58d54b5e5bfeb9d59fa2191ec
     expose:
       - '3000'
   
