@@ -11,7 +11,7 @@ services:
       - '5432:5432'
 
   nestjs:
-    image: adamlarsonlee/tasqr-api:latest
+    image: adamlarsonlee/de-api:latest
     expose:
       - '3000'
   
