@@ -6,25 +6,25 @@ volumes:
 services:
 
   postgres:
-    image: adamlarsonlee/tasqr-db:latest@sha256:9430c66c700dce47c0eb3cc471a630c41586e27f16d5400d507b0fc942e34ec4
+    image: adamlarsonlee/tasqr-db:latest
     ports:
       - '5432:5432'
 
   nestjs:
-    image: adamlarsonlee/tasqr-api:latest@sha256:25e7add057e197f8a0a00e0ba60c014dde90f3e58d54b5e5bfeb9d59fa2191ec
+    image: adamlarsonlee/tasqr-api:latest
     expose:
       - '3000'
   
   angular:
-    image: adamlarsonlee/tasqr-app:latest@sha256:0ba0d20a7ca761329fad5fe3b4a5bc6b980bae200f6ddfded3aee12bd9b5b867
-    restart: no
+    image: adamlarsonlee/tasqr-app:latest
+    restart: 'no'
     expose:
       - '4200'
     volumes:
       - 'www:/www'
 
   nginx:
-    image: adamlarsonlee/tasqr-proxy:latest@sha256:2e44933ecdf5efdf8381d65627c045441d14e6e24af04cf3f5d7fe46cdf57de9
+    image: adamlarsonlee/tasqr-proxy:latest
     ports:
       - '80:80'
     volumes:
